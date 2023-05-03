@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build
+      - name: npm install
         run: |
           npm install
 
@@ -55,4 +55,4 @@ jobs:
           app-name: 'metalmakowska-fe'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C738739706714900ADD6472B3CBB6C91 }}
-          package: ${{ github.workspace }}/node-app.zip
+          package: ${{ github.workspace }}/node-app/node-app.zip
