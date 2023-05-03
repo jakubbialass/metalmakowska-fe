@@ -50,12 +50,7 @@ jobs:
       - name: Check files in workspace
         run: |
           ls
-          ls home
-          ls home/runner
-          ls home/runner/work
-          ls home/runner/work/metalmakowska-fe
-          ls home/runner/work/metalmakowska-fe/metalmakowska-fe
-          ls home/runner/work/metalmakowska-fe/metalmakowska-fe/node-app
+          ls metalmakowska-fe
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -64,4 +59,4 @@ jobs:
           app-name: 'metalmakowska-fe'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C738739706714900ADD6472B3CBB6C91 }}
-          package: ${{ github.workspace }}/node-app/node-app.zip
+          package: metalmakowska-fe/node-app/node-app.zip
