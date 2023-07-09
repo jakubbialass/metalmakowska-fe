@@ -88,8 +88,7 @@
               "browserTarget": "metalmakowska-fe:build:production"
             },
             "development": {
-              "browserTarget": "metalmakowska-fe:build:development",
-              "proxyConfig": "src/proxy.conf.json"
+              "browserTarget": "metalmakowska-fe:build:development"
             }
           },
           "defaultConfiguration": "development"
